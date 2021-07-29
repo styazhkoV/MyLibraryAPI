@@ -9,14 +9,20 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Books.Data.Models;
+using Books.Data;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace Books
 {
     public class Startup
     {
+        public struct ConnectionString { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            ConnectionString = Configuration.GetConnectionString("DefaultConnectionsStrings");
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +32,10 @@ namespace Books
         {
 
             services.AddControllers();
+
+            //Конфигурация подключения к БД
+
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

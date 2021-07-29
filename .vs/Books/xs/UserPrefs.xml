@@ -1,10 +1,21 @@
 ﻿<Properties StartupConfiguration="{4B25D996-39C5-47D6-9C29-89FA4C604964}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Books/Startup.cs">
+    <Files>
+      <File FileName="Books/Startup.cs" Line="21" Column="45" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Books" expanded="True" selected="True">
-            <Node name="Books" expanded="True" />
+          <Node name="Books" expanded="True">
+            <Node name="Books" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True">
+                <Node name="Models" expanded="True" />
+              </Node>
+              <Node name="Startup.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -16,5 +27,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Books FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.Books PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
